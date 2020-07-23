@@ -1,6 +1,9 @@
 from flask import Flask
-app = Flask(__name__)
+import os
 
-@app.route("/")
-def hello():
-    return "Hello World!"
+
+app = Flask(__name__)
+@app.route('/')
+def hello_world():
+    get_env=os.popen("echo $HOSTNAME")
+    return get_env.read()
