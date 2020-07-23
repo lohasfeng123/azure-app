@@ -8,7 +8,3 @@ def hello_world():
     get_env=os.popen("echo $HOSTNAME")
     return get_env.read()
 
-
-if __name__ == "__main__":
-    app.run(debug = True, host = '0.0.0.0', port=8080)
-
